@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Index</h1>
+    <div id ="container">
+   {{#users}}
+   <div class="users">
+   <img src="{{avatar}}" alt="Not the robot you are looking for!">
+   <h2 style="color:#417AC9 ">
+     <a href="/details/{{id}}/{{data}}">{{name}}</a>
+   </h2>
+   {{job}}
+   {{#company}}{{company}}{{/company}}
+   {{^company}}<p class="para", style="color: red">Available for hire</p>{{/company}}
+   </div>
+   {{/users}}
+ </div>
+
+
+  </body>
+</html>
